@@ -14,7 +14,6 @@ class StoreResource
      */
     public StoreResponse $data;
 
-    
     /**
      * @OA\Property()
      */

@@ -2,12 +2,11 @@
 
 namespace App\Domain\Http\Controllers\Store;
 
-use App\Domain\Entities\Book;
-use App\Domain\Http\Requests\Store\StoreStoreRequest;
 use App\Domain\Entities\Store;
-use App\Domain\Services\Store\StoreService;
+use App\Domain\Http\Requests\Store\StoreStoreRequest;
 use App\Domain\Http\Requests\Store\StoreUpdateRequest;
 use App\Domain\Http\Resources\Store\StoreResource;
+use App\Domain\Services\Store\StoreService;
 use App\Infrastructure\Laravel\Controller;
 use Illuminate\Http\Response;
 
@@ -41,7 +40,6 @@ class StoreController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  Store $store
      * @return \Illuminate\Http\Response
      */
     public function show(Store $store)
@@ -52,8 +50,6 @@ class StoreController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  StoreUpdateRequest $request
-     * @param  Store $store
      * @return \Illuminate\Http\Response
      */
     public function update(StoreUpdateRequest $request, Store $store)
@@ -62,9 +58,8 @@ class StoreController extends Controller
     }
 
     /**
-     * ***-PUT YOUR LOGIC TO DELETE-*** 
+     * ***-PUT YOUR LOGIC TO DELETE-***
      *
-     * @param  Store $store
      * @return \Illuminate\Http\Response
      */
     public function destroy(Store $store)
@@ -76,6 +71,7 @@ class StoreController extends Controller
     {
         return $this->showOne($this->storeService->attachBook($storeId, $bookId), Response::HTTP_OK, StoreResource::class);
     }
+
     public function removeBook(int $storeId, int $bookId)
     {
         return $this->showOne($this->storeService->removeBook($storeId, $bookId), Response::HTTP_OK, StoreResource::class);

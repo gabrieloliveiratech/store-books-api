@@ -2,16 +2,12 @@
 
 namespace App\Domain\Repositories\Address;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
-use App\Domain\Repositories\Address\AddressRepository;
 use App\Domain\Entities\Address;
-use App\Domain\Validators\Address\AddressValidator;
+use Prettus\Repository\Criteria\RequestCriteria;
+use Prettus\Repository\Eloquent\BaseRepository;
 
 /**
  * Class AddressRepositoryEloquent.
- *
- * @package namespace App\Domain\Repositories\Address;
  */
 class AddressRepositoryEloquent extends BaseRepository implements AddressRepository
 {
@@ -25,8 +21,6 @@ class AddressRepositoryEloquent extends BaseRepository implements AddressReposit
         return Address::class;
     }
 
-    
-
     /**
      * Boot up the repository, pushing criteria
      */
@@ -34,5 +28,4 @@ class AddressRepositoryEloquent extends BaseRepository implements AddressReposit
     {
         $this->pushCriteria(app(RequestCriteria::class));
     }
-    
 }

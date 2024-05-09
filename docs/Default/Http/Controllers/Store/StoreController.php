@@ -164,13 +164,16 @@ class StoreController
      *          name="filter[name]",
      *          in="query",
      *          required=false,
+     *
      *          @OA\Schema(type="string"),
      *          description="Filter stores by name"
      *      ),
+     *
      *      @OA\Parameter(
      *          name="filter[active]",
      *          in="query",
      *          required=false,
+     *
      *          @OA\Schema(type="string"),
      *          description="Filter stores by active: false or true"
      *      ),
@@ -179,6 +182,7 @@ class StoreController
      *          name="page[size]",
      *          in="query",
      *          required=false,
+     *
      *          @OA\Schema(type="integer"),
      *          description="Number of records per page"
      *      ),
@@ -187,6 +191,7 @@ class StoreController
      *          name="page[number]",
      *          in="query",
      *          required=false,
+     *
      *          @OA\Schema(type="integer"),
      *          description="Page number"
      *      ),
@@ -194,13 +199,16 @@ class StoreController
      *      @OA\Response(
      *          response=200,
      *          description="OK",
+     *
      *          @OA\JsonContent(type="array", @OA\Items(ref="#/components/schemas/StoreResource"))
      *      ),
      *
      *      @OA\Response(
      *          response=400,
      *          description="Bad Request",
+     *
      *          @OA\JsonContent(
+     *
      *              @OA\Property(
      *                  property="message",
      *                  type="string"
@@ -212,7 +220,9 @@ class StoreController
      *      @OA\Response(
      *          response=500,
      *          description="Internal Error",
+     *
      *          @OA\JsonContent(
+     *
      *              @OA\Property(
      *                  property="message",
      *                  type="string"
@@ -298,6 +308,7 @@ class StoreController
      *          name="storeId",
      *          in="path",
      *          required=true,
+     *
      *          @OA\Schema(type="integer")
      *      ),
      *
@@ -305,19 +316,23 @@ class StoreController
      *          name="bookId",
      *          in="path",
      *          required=true,
+     *
      *          @OA\Schema(type="integer")
      *      ),
      *
      *      @OA\Response(
      *          response=200,
      *          description="OK",
+     *
      *          @OA\JsonContent(ref="#/components/schemas/StoreResource")
      *      ),
      *
      *      @OA\Response(
      *          response=400,
      *          description="Bad Request",
+     *
      *          @OA\JsonContent(
+     *
      *              @OA\Property(
      *                  property="message",
      *                  type="string"
@@ -329,7 +344,9 @@ class StoreController
      *      @OA\Response(
      *          response=500,
      *          description="Internal Error",
+     *
      *          @OA\JsonContent(
+     *
      *              @OA\Property(
      *                  property="message",
      *                  type="string"
@@ -353,6 +370,7 @@ class StoreController
      *          name="storeId",
      *          in="path",
      *          required=true,
+     *
      *          @OA\Schema(type="integer")
      *      ),
      *
@@ -360,19 +378,23 @@ class StoreController
      *          name="bookId",
      *          in="path",
      *          required=true,
+     *
      *          @OA\Schema(type="integer")
      *      ),
      *
      *      @OA\Response(
      *          response=200,
      *          description="OK",
+     *
      *          @OA\JsonContent(ref="#/components/schemas/StoreResource")
      *      ),
      *
      *      @OA\Response(
      *          response=400,
      *          description="Bad Request",
+     *
      *          @OA\JsonContent(
+     *
      *              @OA\Property(
      *                  property="message",
      *                  type="string"
@@ -384,7 +406,9 @@ class StoreController
      *      @OA\Response(
      *          response=500,
      *          description="Internal Error",
+     *
      *          @OA\JsonContent(
+     *
      *              @OA\Property(
      *                  property="message",
      *                  type="string"

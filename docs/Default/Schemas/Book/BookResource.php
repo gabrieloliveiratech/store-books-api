@@ -14,7 +14,6 @@ class BookResource
      */
     public BookResponse $data;
 
-    
     /**
      * @OA\Property()
      */

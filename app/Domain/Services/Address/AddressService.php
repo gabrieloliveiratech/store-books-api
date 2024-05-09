@@ -13,8 +13,7 @@ class AddressService
 
     /**
      * Store a new Address resource
-     * 
-     * @param array $data
+     *
      * @return Address
      */
     public function store(array $data)

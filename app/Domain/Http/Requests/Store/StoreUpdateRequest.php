@@ -25,7 +25,7 @@ class StoreUpdateRequest extends FormRequest
     {
         return [
             'name' => ['nullable', 'string'],
-            'active' => ['nullable', 'boolean']
+            'active' => ['nullable', 'boolean'],
         ];
     }
 }

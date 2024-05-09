@@ -154,49 +154,54 @@ class BookController
     {
     }
 
-/**
- * @OA\Get(
- *      tags={"Books"},
- *      path="/books",
- *      summary="Get all books with optional name filter and pagination",
- *
- *      @OA\Parameter(
- *          name="filter[name]",
- *          in="query",
- *          required=false,
- *          @OA\Schema(type="string"),
- *          description="Filter books by name"
- *      ),
- *
- *      @OA\Parameter(
- *          name="page[size]",
- *          in="query",
- *          required=false,
- *          @OA\Schema(type="integer"),
- *          description="Number of records per page"
- *      ),
- *
- *      @OA\Parameter(
- *          name="page[number]",
- *          in="query",
- *          required=false,
- *          @OA\Schema(type="integer"),
- *          description="Page number"
- *      ),
- *
- *      @OA\Response(
- *          response=200,
- *          description="OK",
- *          @OA\JsonContent(type="array", @OA\Items(ref="#/components/schemas/BookResponse"))
- *      ),
- *
- *      @OA\Response(
- *          response=422,
- *          description="Unprocessable Entity",
- *          @OA\JsonContent(ref="#/components/schemas/Unprocessable")
- *      )
- * )
- */
+    /**
+     * @OA\Get(
+     *      tags={"Books"},
+     *      path="/books",
+     *      summary="Get all books with optional name filter and pagination",
+     *
+     *      @OA\Parameter(
+     *          name="filter[name]",
+     *          in="query",
+     *          required=false,
+     *
+     *          @OA\Schema(type="string"),
+     *          description="Filter books by name"
+     *      ),
+     *
+     *      @OA\Parameter(
+     *          name="page[size]",
+     *          in="query",
+     *          required=false,
+     *
+     *          @OA\Schema(type="integer"),
+     *          description="Number of records per page"
+     *      ),
+     *
+     *      @OA\Parameter(
+     *          name="page[number]",
+     *          in="query",
+     *          required=false,
+     *
+     *          @OA\Schema(type="integer"),
+     *          description="Page number"
+     *      ),
+     *
+     *      @OA\Response(
+     *          response=200,
+     *          description="OK",
+     *
+     *          @OA\JsonContent(type="array", @OA\Items(ref="#/components/schemas/BookResponse"))
+     *      ),
+     *
+     *      @OA\Response(
+     *          response=422,
+     *          description="Unprocessable Entity",
+     *
+     *          @OA\JsonContent(ref="#/components/schemas/Unprocessable")
+     *      )
+     * )
+     */
     public function index()
     {
     }

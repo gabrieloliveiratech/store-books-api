@@ -10,19 +10,17 @@ use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 class StoreService
 {
-    public function __construct
-    (
+    public function __construct(
         private StoreRepository $storeRepository,
         private BookService $bookService,
         private AddressService $addressService
-        )
-    {
+    ) {
     }
 
     /**
      * Get an Store instance by ID
-     * 
-     * @param int $id
+     *
+     * @param  int  $id
      * @return Store
      */
     public function getById($id)
@@ -32,7 +30,7 @@ class StoreService
 
     /**
      * Get all registers
-     * 
+     *
      * @return LengthAwarePaginator
      */
     public function getAll()
@@ -42,8 +40,7 @@ class StoreService
 
     /**
      * Store a new store resource
-     * 
-     * @param array $data
+     *
      * @return Store
      */
     public function store(array $data)
@@ -60,9 +57,7 @@ class StoreService
 
     /**
      * Update a store resource
-     * 
-     * @param array $data
-     * @param Store $store
+     *
      * @return Store
      */
     public function update(array $data, Store $store)
@@ -72,7 +67,7 @@ class StoreService
 
     /**
      * Attach a book to a store
-     * 
+     *
      * @return Store
      */
     public function attachBook(int $storeId, int $bookId)
@@ -80,14 +75,16 @@ class StoreService
         $store = $this->storeRepository->find($storeId);
         $book = $this->bookService->getById($bookId);
         $store->books()->syncWithoutDetaching([$book->id]);
+
         return $store;
     }
-    
+
     public function removeBook(int $storeId, int $bookId)
     {
         $store = $this->storeRepository->find($storeId);
         $book = $this->bookService->getById($bookId);
         $store->books()->wherePivot('book_id', $book->id)->update(['book_store.deleted_at' => now()]);
+
         return $store;
     }
 }

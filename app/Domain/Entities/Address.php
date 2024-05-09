@@ -8,8 +8,6 @@ use Prettus\Repository\Traits\TransformableTrait;
 
 /**
  * Class Address.
- *
- * @package namespace App\Domain\Entities;
  */
 class Address extends Model implements Transformable
 {

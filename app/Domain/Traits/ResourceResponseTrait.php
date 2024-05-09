@@ -53,13 +53,13 @@ trait ResourceResponseTrait
         $modelSegment = substr($routeName, 0, $pos);
         $modelSegments = explode('-', $modelSegment);
         $modelName = '';
-    
+
         foreach ($modelSegments as $segment) {
             $modelName .= ucfirst(\Str::singular($segment));
         }
-    
+
         $resourceName = 'App\\Domain\\Http\\Resources\\'.$modelName.'\\'.$modelName.'Resource';
-    
+
         return $resourceName;
     }
 }

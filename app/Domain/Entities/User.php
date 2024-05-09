@@ -3,21 +3,18 @@
 namespace App\Domain\Entities;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-
-use Prettus\Repository\Traits\TransformableTrait;
-use Tymon\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Hash;
+use Prettus\Repository\Traits\TransformableTrait;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
 /**
  * Class User.
- *
- * @package namespace App\Domain\Entities\User;
  */
 class User extends Authenticatable implements JWTSubject
 {
-    use TransformableTrait;
     use HasFactory;
+    use TransformableTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -27,7 +24,7 @@ class User extends Authenticatable implements JWTSubject
     protected $fillable = [
         'name',
         'email',
-        'password'
+        'password',
     ];
 
     /**

@@ -7,13 +7,11 @@ use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Interface StoreRepository.
- *
- * @package namespace App\Domain\Repositories\Store;
  */
 interface StoreRepository extends RepositoryInterface
 {
     /**
-     *  @return LengthAwarePaginator
+     * @return LengthAwarePaginator
      */
     public function getAll();
 }

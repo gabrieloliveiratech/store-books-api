@@ -2,10 +2,10 @@
 
 namespace App\Domain\Http\Controllers\Book;
 
-use App\Domain\Http\Requests\Book\BookStoreRequest;
 use App\Domain\Entities\Book;
-use App\Domain\Services\Book\BookService;
+use App\Domain\Http\Requests\Book\BookStoreRequest;
 use App\Domain\Http\Requests\Book\BookUpdateRequest;
+use App\Domain\Services\Book\BookService;
 use App\Infrastructure\Laravel\Controller;
 use Illuminate\Http\Response;
 
@@ -39,7 +39,6 @@ class BookController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  Book $book
      * @return \Illuminate\Http\Response
      */
     public function show(Book $book)
@@ -50,8 +49,6 @@ class BookController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  BookUpdateRequest $request
-     * @param  Book $book
      * @return \Illuminate\Http\Response
      */
     public function update(BookUpdateRequest $request, Book $book)
@@ -60,9 +57,8 @@ class BookController extends Controller
     }
 
     /**
-     * ***-PUT YOUR LOGIC TO DELETE-*** 
+     * ***-PUT YOUR LOGIC TO DELETE-***
      *
-     * @param  Book $book
      * @return \Illuminate\Http\Response
      */
     public function destroy(Book $book)

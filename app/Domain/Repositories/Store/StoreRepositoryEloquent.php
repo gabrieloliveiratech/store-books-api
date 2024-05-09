@@ -2,18 +2,15 @@
 
 namespace App\Domain\Repositories\Store;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
-use App\Domain\Repositories\Store\StoreRepository;
 use App\Domain\Entities\Store;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Prettus\Repository\Criteria\RequestCriteria;
+use Prettus\Repository\Eloquent\BaseRepository;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 
 /**
  * Class StoreRepositoryEloquent.
- *
- * @package namespace App\Domain\Repositories\Store;
  */
 class StoreRepositoryEloquent extends BaseRepository implements StoreRepository
 {
@@ -35,7 +32,6 @@ class StoreRepositoryEloquent extends BaseRepository implements StoreRepository
         $this->pushCriteria(app(RequestCriteria::class));
     }
 
-
     /**
      * Return build Eloquent query
      *
@@ -49,13 +45,12 @@ class StoreRepositoryEloquent extends BaseRepository implements StoreRepository
                 'id',
                 AllowedFilter::callback('name', function ($query, $value) {
                     $query->where(function ($query) use ($value) {
-                        $query->where('name', 'LIKE', '%' . $value . '%');
+                        $query->where('name', 'LIKE', '%'.$value.'%');
                     });
                 }),
-                AllowedFilter::exact('active')
+                AllowedFilter::exact('active'),
             ])->jsonPaginate();
     }
-
 
     /**
      * @return LengthAwarePaginator

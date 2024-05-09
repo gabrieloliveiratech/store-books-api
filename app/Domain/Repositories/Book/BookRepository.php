@@ -7,13 +7,11 @@ use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Interface BookRepository.
- *
- * @package namespace App\Domain\Repositories\Book;
  */
 interface BookRepository extends RepositoryInterface
 {
     /**
-     *  @return LengthAwarePaginator
+     * @return LengthAwarePaginator
      */
     public function getAll();
 }

@@ -14,19 +14,23 @@ class AuthController
      *
      *      @OA\RequestBody(
      *          required=true,
+     *
      *          @OA\JsonContent(ref="#/components/schemas/UserSignup")
      *      ),
      *
      *      @OA\Response(
      *          response=201,
      *          description="Created",
+     *
      *          @OA\JsonContent(ref="#/components/schemas/AuthResponse")
      *      ),
      *
      *      @OA\Response(
      *          response=400,
      *          description="Bad Request",
+     *
      *          @OA\JsonContent(
+     *
      *              @OA\Property(
      *                  property="message",
      *                  type="string"
@@ -38,7 +42,9 @@ class AuthController
      *      @OA\Response(
      *          response=500,
      *          description="Internal Error",
+     *
      *          @OA\JsonContent(
+     *
      *              @OA\Property(
      *                  property="message",
      *                  type="string"
@@ -60,19 +66,23 @@ class AuthController
      *
      *      @OA\RequestBody(
      *          required=true,
+     *
      *          @OA\JsonContent(ref="#/components/schemas/UserLogin")
      *      ),
      *
      *      @OA\Response(
      *          response=200,
      *          description="OK",
+     *
      *          @OA\JsonContent(ref="#/components/schemas/AuthResponse")
      *      ),
      *
      *      @OA\Response(
      *          response=400,
      *          description="Bad Request",
+     *
      *          @OA\JsonContent(
+     *
      *              @OA\Property(
      *                  property="message",
      *                  type="string"
@@ -84,7 +94,9 @@ class AuthController
      *      @OA\Response(
      *          response=500,
      *          description="Internal Error",
+     *
      *          @OA\JsonContent(
+     *
      *              @OA\Property(
      *                  property="message",
      *                  type="string"

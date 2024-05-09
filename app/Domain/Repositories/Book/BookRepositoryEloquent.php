@@ -2,18 +2,15 @@
 
 namespace App\Domain\Repositories\Book;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
-use App\Domain\Repositories\Book\BookRepository;
 use App\Domain\Entities\Book;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Prettus\Repository\Criteria\RequestCriteria;
+use Prettus\Repository\Eloquent\BaseRepository;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 
 /**
  * Class BookRepositoryEloquent.
- *
- * @package namespace App\Domain\Repositories\Book;
  */
 class BookRepositoryEloquent extends BaseRepository implements BookRepository
 {
@@ -26,7 +23,6 @@ class BookRepositoryEloquent extends BaseRepository implements BookRepository
     {
         return Book::class;
     }
-
 
     /**
      * Boot up the repository, pushing criteria
@@ -49,12 +45,11 @@ class BookRepositoryEloquent extends BaseRepository implements BookRepository
                 'id',
                 AllowedFilter::callback('name', function ($query, $value) {
                     $query->where(function ($query) use ($value) {
-                        $query->where('name', 'LIKE', '%' . $value . '%');
+                        $query->where('name', 'LIKE', '%'.$value.'%');
                     });
                 }),
             ])->jsonPaginate();
     }
-
 
     /**
      * @return LengthAwarePaginator
@@ -63,5 +58,4 @@ class BookRepositoryEloquent extends BaseRepository implements BookRepository
     {
         return $this->queryBuilder($this->model());
     }
-
 }

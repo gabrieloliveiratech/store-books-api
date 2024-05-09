@@ -14,8 +14,8 @@ class BookService
 
     /**
      * Get an Book instance by ID
-     * 
-     * @param int $book
+     *
+     * @param  int  $book
      * @return Book
      */
     public function getById($id)
@@ -25,7 +25,7 @@ class BookService
 
     /**
      * Get all registers
-     * 
+     *
      * @return LengthAwarePaginator
      */
     public function getAll()
@@ -35,8 +35,7 @@ class BookService
 
     /**
      * Store a new Book resource
-     * 
-     * @param array $data
+     *
      * @return Book
      */
     public function store(array $data)
@@ -46,9 +45,7 @@ class BookService
 
     /**
      * Update a Book resource
-     * 
-     * @param array $data
-     * @param Book $book
+     *
      * @return Book
      */
     public function update(array $data, Book $book)

@@ -8,8 +8,6 @@ use Prettus\Repository\Traits\TransformableTrait;
 
 /**
  * Class Book.
- *
- * @package namespace App\Domain\Entities\Book;
  */
 class Book extends Model implements Transformable
 {
@@ -30,5 +28,4 @@ class Book extends Model implements Transformable
     {
         return $this->belongsToMany(Store::class);
     }
-
 }

@@ -26,7 +26,7 @@ class BookUpdateRequest extends FormRequest
         return [
             'name' => ['nullable', 'string'],
             'isbn' => ['nullable', 'numeric', 'unique:books,isbn'],
-            'value' => ['nullable', 'numeric']
+            'value' => ['nullable', 'numeric'],
         ];
     }
 }

@@ -3,14 +3,11 @@
 namespace App\Domain\Repositories\User;
 
 use App\Domain\Entities\User;
-use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use App\Domain\Repositories\User\UserRepository;
+use Prettus\Repository\Eloquent\BaseRepository;
 
 /**
  * Class UserRepositoryEloquent.
- *
- * @package namespace App\Repositories\User;
  */
 class UserRepositoryEloquent extends BaseRepository implements UserRepository
 {
@@ -22,7 +19,7 @@ class UserRepositoryEloquent extends BaseRepository implements UserRepository
     public function model()
     {
         return User::class;
-    }    
+    }
 
     /**
      * Boot up the repository, pushing criteria
@@ -31,5 +28,4 @@ class UserRepositoryEloquent extends BaseRepository implements UserRepository
     {
         $this->pushCriteria(app(RequestCriteria::class));
     }
-    
 }

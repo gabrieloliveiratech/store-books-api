@@ -15,7 +15,7 @@ return [
     |
     */
     'pagination' => [
-        'limit' => 15
+        'limit' => 15,
     ],
 
     /*
@@ -32,9 +32,9 @@ return [
     */
     'fractal' => [
         'params' => [
-            'include' => 'include'
+            'include' => 'include',
         ],
-        'serializer' => League\Fractal\Serializer\DataArraySerializer::class
+        'serializer' => League\Fractal\Serializer\DataArraySerializer::class,
     ],
 
     /*
@@ -106,7 +106,7 @@ return [
                 'create' => true,
                 'update' => true,
                 'delete' => true,
-            ]
+            ],
         ],
 
         'params' => [
@@ -119,7 +119,7 @@ return [
             | Ex: http://prettus.local/?search=lorem&skipCache=true
             |
             */
-            'skipCache' => 'skipCache'
+            'skipCache' => 'skipCache',
         ],
 
         /*
@@ -139,8 +139,8 @@ return [
        */
         'allowed' => [
             'only' => null,
-            'except' => null
-        ]
+            'except' => null,
+        ],
     ],
 
     /*
@@ -170,7 +170,7 @@ return [
         'acceptedConditions' => [
             '=',
             'like',
-            'in'
+            'in',
         ],
         /*
         |--------------------------------------------------------------------------
@@ -218,8 +218,8 @@ return [
             'sortedBy' => 'sortedBy',
             'with' => 'with',
             'searchJoin' => 'searchJoin',
-            'withCount' => 'withCount'
-        ]
+            'withCount' => 'withCount',
+        ],
     ],
     /*
     |--------------------------------------------------------------------------
@@ -228,9 +228,9 @@ return [
     |
     */
     'generator' => [
-        'basePath' => app()->path() . '/Domain/',
+        'basePath' => app()->path().'/Domain/',
         'rootNamespace' => 'App\\Domain\\',
-        'stubsOverridePath' => app()->path() . '/Domain/',
+        'stubsOverridePath' => app()->path().'/Domain/',
         'paths' => [
             'models' => 'Entities',
             'repositories' => 'Repositories',
@@ -240,7 +240,7 @@ return [
             'validators' => 'Validators',
             'controllers' => 'Http/Controllers',
             'provider' => 'RepositoryServiceProvider',
-            'criteria' => 'Criteria'
-        ]
-    ]
+            'criteria' => 'Criteria',
+        ],
+    ],
 ];

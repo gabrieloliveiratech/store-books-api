@@ -5,7 +5,6 @@ namespace App\Domain\Services\User;
 use App\Domain\Entities\User;
 use App\Domain\Repositories\User\UserRepository;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
-use Illuminate\Support\Collection;
 
 class UserService
 {
@@ -15,8 +14,8 @@ class UserService
 
     /**
      * Get an user instance by ID
-     * 
-     * @param User $user
+     *
+     * @param  User  $user
      * @return User
      */
     public function getById($user)
@@ -26,7 +25,7 @@ class UserService
 
     /**
      * Get all registers
-     * 
+     *
      * @return LengthAwarePaginator
      */
     public function getAll()
@@ -36,8 +35,7 @@ class UserService
 
     /**
      * Store a new User resource
-     * 
-     * @param array $data
+     *
      * @return User
      */
     public function store(array $data)
@@ -47,9 +45,7 @@ class UserService
 
     /**
      * Update a User resource
-     * 
-     * @param array $data
-     * @param User $user
+     *
      * @return User
      */
     public function update(array $data, User $user)

@@ -26,7 +26,7 @@ class BookStoreRequest extends FormRequest
         return [
             'name' => ['required', 'string'],
             'isbn' => ['required', 'numeric', 'unique:books,isbn'],
-            'value' => ['required', 'numeric']
+            'value' => ['required', 'numeric'],
         ];
     }
 }

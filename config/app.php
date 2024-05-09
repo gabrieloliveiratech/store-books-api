@@ -187,7 +187,6 @@ return [
          */
         Spatie\JsonApiPaginate\JsonApiPaginateServiceProvider::class,
 
-
         /*
          * Application Service Providers...
          */

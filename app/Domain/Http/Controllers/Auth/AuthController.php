@@ -28,7 +28,7 @@ class AuthController extends Controller
     {
         $credentials = $request->validated();
 
-        if (!$token = auth()->attempt($credentials)) {
+        if (! $token = auth()->attempt($credentials)) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
@@ -39,11 +39,11 @@ class AuthController extends Controller
     {
         $user = $this->userService->store($request->validated());
 
-        if (!$token = auth()->attempt(['email' => $user->email, 'password' => $request->password])) {
+        if (! $token = auth()->attempt(['email' => $user->email, 'password' => $request->password])) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
-        return $this->respondWithToken($token);    
+        return $this->respondWithToken($token);
     }
 
     /**
@@ -81,8 +81,7 @@ class AuthController extends Controller
     /**
      * Get the token array structure.
      *
-     * @param  string $token
-     *
+     * @param  string  $token
      * @return \Illuminate\Http\JsonResponse
      */
     protected function respondWithToken($token)
@@ -90,7 +89,7 @@ class AuthController extends Controller
         return response()->json([
             'access_token' => $token,
             'token_type' => 'bearer',
-            'expires_in' => auth()->factory()->getTTL() * 60
+            'expires_in' => auth()->factory()->getTTL() * 60,
         ]);
     }
 }

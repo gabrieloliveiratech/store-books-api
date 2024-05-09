@@ -20,7 +20,7 @@ class StoreResource extends JsonResource
             'name' => $this->name,
             'active' => (bool) $this->active,
             'books' => BookResource::collection($this->books),
-            'addresses' => AddressResource::collection($this->addresses)
+            'addresses' => AddressResource::collection($this->addresses),
         ];
     }
 }

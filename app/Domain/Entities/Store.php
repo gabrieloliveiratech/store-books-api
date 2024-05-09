@@ -8,8 +8,6 @@ use Prettus\Repository\Traits\TransformableTrait;
 
 /**
  * Class Store.
- *
- * @package namespace App\Domain\Entities;
  */
 class Store extends Model implements Transformable
 {
@@ -22,7 +20,7 @@ class Store extends Model implements Transformable
      */
     protected $fillable = [
         'name',
-        'active'
+        'active',
     ];
 
     public function books()

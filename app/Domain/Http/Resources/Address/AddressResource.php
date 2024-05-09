@@ -2,7 +2,6 @@
 
 namespace App\Domain\Http\Resources\Address;
 
-use App\Domain\Http\Resources\Book\BookResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class AddressResource extends JsonResource
