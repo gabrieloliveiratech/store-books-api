@@ -38,7 +38,7 @@ trait ApiExceptionHandlerTrait
             return $this->generateResponse("Unique constraint violation for key '$constraintKey'", Response::HTTP_CONFLICT);
         }
 
-        return $this->generateResponse($exception->getMessage() ?? 'Server error', $exception->getCode() ?? Response::HTTP_INTERNAL_SERVER_ERROR);
+        return $this->generateResponse('Server error', $this->isValidHttpStatus($exception->getCode()) ? $exception->getCode() : Response::HTTP_INTERNAL_SERVER_ERROR);
     }
 
     private function handleValidationException(ValidationException $exception)
@@ -65,5 +65,10 @@ trait ApiExceptionHandlerTrait
         preg_match("/key '(.+?)'/", $errorMessage, $matches);
 
         return $matches[1] ?? 'Unknown';
+    }
+
+    private function isValidHttpStatus($code)
+    {
+        return $code >= 100 && $code < 600;
     }
 }

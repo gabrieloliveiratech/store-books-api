@@ -46,6 +46,13 @@ DB_PASSWORD=senha_aqui
     php artisan key:generate
     ```
 
+- Inside the laravel container, run migrations:
+
+    ```dosini
+       docker exec -it "container_name" bash
+    php artisan migrate
+    ```
+
 - Inside the laravel container, make jwt key:
 
     ```dosini

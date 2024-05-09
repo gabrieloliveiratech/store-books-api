@@ -20,13 +20,13 @@
         }
     ],
     "paths": {
-        "/api/auth/signup": {
+        "/auth/signup": {
             "post": {
                 "tags": [
                     "Auth"
                 ],
                 "summary": "User signup",
-                "operationId": "d64635f75b3e9389a15226d679697142",
+                "operationId": "2172b2140bb1bbc27b53dd548bc1e5c7",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -87,13 +87,13 @@
                 }
             }
         },
-        "/api/auth/login": {
+        "/auth/login": {
             "post": {
                 "tags": [
                     "Auth"
                 ],
                 "summary": "User login",
-                "operationId": "15173ed8c245b5ea3940eb64a5dff7df",
+                "operationId": "fecc6531a97620279374086a1b0e0fb9",
                 "requestBody": {
                     "required": true,
                     "content": {

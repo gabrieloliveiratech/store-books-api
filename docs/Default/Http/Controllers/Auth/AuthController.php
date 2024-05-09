@@ -9,7 +9,7 @@ class AuthController
     /**
      * @OA\Post(
      *      tags={"Auth"},
-     *      path="/api/auth/signup",
+     *      path="/auth/signup",
      *      summary="User signup",
      *
      *      @OA\RequestBody(
@@ -55,7 +55,7 @@ class AuthController
     /**
      * @OA\Post(
      *      tags={"Auth"},
-     *      path="/api/auth/login",
+     *      path="/auth/login",
      *      summary="User login",
      *
      *      @OA\RequestBody(
