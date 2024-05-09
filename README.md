@@ -73,6 +73,7 @@ This project is currently extended with the following packages and services. Ins
 | ------------- | ------------- |
 |  L5-Swagger OpenAPI  | https://github.com/DarkaOnLine/L5-Swagger/  |
 |  L5 Repository  | https://github.com/andersao/l5-repository  |
-|Spatie Laravel JSON API Paginate	| https://github.com/spatie/laravel-json-api-paginate |
-|Spatie Laravel Query Builder	| https://github.com/spatie/laravel-query-builder |
-|Tymon JWT Auth	| https://github.com/tymondesigns/jwt-auth |
+| Spatie Laravel JSON API Paginate	| https://github.com/spatie/laravel-json-api-paginate |
+| Spatie Laravel Query Builder	| https://github.com/spatie/laravel-query-builder |
+| Tymon JWT Auth	| https://github.com/tymondesigns/jwt-auth |
+| Laravel Pint | https://laravel.com/docs/9.x/pint |
