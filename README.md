@@ -1,5 +1,5 @@
 ### Store and Book's CRUD with DDD
-###### A simple API that manage CRUDs, applying DDD to Laravel
+###### A simple API that manage CRUDs and relationships for Stores and Books, applying DDD to Laravel
 
 #### Stack
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
