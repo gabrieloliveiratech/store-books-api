@@ -77,3 +77,5 @@ This project is currently extended with the following packages and services. Ins
 | Spatie Laravel Query Builder	| https://github.com/spatie/laravel-query-builder |
 | Tymon JWT Auth	| https://github.com/tymondesigns/jwt-auth |
 | Laravel Pint | https://laravel.com/docs/9.x/pint |
+
+
